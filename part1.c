@@ -33,9 +33,9 @@ int* getArray(int input_size){
     return arr;
 }
 
-int getPowerOf(int num){
+int get_power_of(int num){
     int power = 0;
-    while(num > 0 && num % POWER_OF == 0){
+    while(num && num % POWER_OF == 0){
         power++;
         num /= POWER_OF;
     }
@@ -49,9 +49,9 @@ int main() {
     int powers_sum = 0;
     for(int i=0; i < input_size; i++){
         int num = arr[i];
-        int power = getPowerOf(num);
+        int power = get_power_of(num);
         if(power != MISTAKE){
-            printf("The number %d is a power of %d: %d = %d^%d\n", num, POWER_OF, num, POWER_OF, power);
+            printf("The number %d is a power of 2: %d = 2^%d\n", num, num, power);
             powers_sum += power;
         }
     }
